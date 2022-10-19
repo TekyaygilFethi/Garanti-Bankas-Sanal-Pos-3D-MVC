@@ -81,7 +81,7 @@ namespace Garanti3D_PAY.Controllers
             string strHostAddress = "https://sanalposprov.garanti.com.tr/servlet/gt3dengine";
  
             string SecurityData = GetSHA1(strProvisionPassword + _strTerminalID).ToUpper();
-            string HashData = GetSHA512(strTerminalID + strOrderID + strAmount + strCurrencyCode + strSuccessURL + strErrorURL + strType + strInstallmentCount + strStoreKey + SecurityData).ToUpper();
+            string HashData = GetSHA512(strTerminalID + strOrderID + strAmount + strSuccessURL + strErrorURL + strType + strInstallmentCount + strStoreKey + SecurityData).ToUpper();
  
             garanti3DViewModel gv = new garanti3DViewModel();
  
